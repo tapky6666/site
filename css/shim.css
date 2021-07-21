@@ -1,0 +1,39 @@
+.main {
+	padding: 20px 10px;
+}
+
+.hack h1 {
+	padding-top: 0;
+}
+
+footer.footer {
+	border-top: 1px solid #ccc;
+	margin-top: 80px;
+	margin-top: 5rem;
+	padding: 48px 0;
+	padding: 3rem 0;
+}
+
+img {
+	max-width: 100%;
+	padding: 1em;
+}
+
+.conversation {
+  display: flex;
+}
+
+.conversation-picture {
+  flex: 1;
+  min-width: 9rem;
+  max-width: calc(((70rem - 2rem)/6));
+}
+
+.conversation-smol {
+    min-width: 6rem;
+    max-width: 6rem;
+}
+
+.conversation-chat {
+    align-self: center;
+}

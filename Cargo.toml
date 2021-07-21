@@ -1,0 +1,65 @@
+[package]
+name = "xesite"
+version = "2.3.0"
+authors = ["Christine Dodrill <me@christine.website>"]
+edition = "2018"
+build = "src/build.rs"
+repository = "https://github.com/Xe/site"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+color-eyre = "0.5"
+chrono = "0.4"
+comrak = "0.10"
+envy = "0.4"
+estimated_read_time = "1"
+futures = "0.3"
+glob = "0.3"
+hyper = "0.14"
+kankyo = "0.3"
+lazy_static = "1.4"
+log = "0.4"
+mime = "0.3.0"
+prometheus = { version = "0.12", default-features = false, features = ["process"] }
+rand = "0"
+reqwest = { version = "0.11", features = ["json"] }
+serde_dhall = "0.10.1"
+serde = { version = "1", features = ["derive"] }
+serde_yaml = "0.8"
+sitemap = "0.4"
+thiserror = "1"
+tokio = { version = "1", features = ["full"] }
+tokio-stream = { version = "0.1", features = ["net"] }
+tracing = "0.1"
+tracing-futures = "0.2"
+tracing-subscriber = { version = "0.2", features = ["fmt"] }
+warp = "0.3"
+xml-rs = "0.8"
+url = "2"
+uuid = { version = "0.8", features = ["serde", "v4"] }
+
+# workspace dependencies
+cfcache = { path = "./lib/cfcache" }
+go_vanity = { path = "./lib/go_vanity" }
+jsonfeed = { path = "./lib/jsonfeed" }
+mi = { path = "./lib/mi" }
+patreon = { path = "./lib/patreon" }
+
+# os-specific dependencies
+[target.'cfg(target_os = "linux")'.dependencies]
+sdnotify = { version = "0.2", default-features = false }
+
+[build-dependencies]
+ructe = { version = "0.13", features = ["warp02"] }
+
+[dev-dependencies]
+pfacts = "0"
+serde_json = "1"
+eyre = "0.6"
+pretty_env_logger = "0"
+
+[workspace]
+members = [
+  "./lib/*",
+]

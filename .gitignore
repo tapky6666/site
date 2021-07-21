@@ -1,0 +1,8 @@
+*.asar
+cw.tar
+.env
+.DS_Store
+/result-*
+/result
+.#*
+/target
