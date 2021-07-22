@@ -29,7 +29,7 @@ pub async fn the_cloud() -> Result<()> {
 async fn bing() -> Result<()> {
     let cli = reqwest::Client::new();
     cli.get("https://www.bing.com/ping")
-        .query(&[("sitemap", "https://christine.website/sitemap.xml")])
+        .query(&[("sitemap", "https://fetsorn.website/sitemap.xml")])
         .header("User-Agent", crate::APPLICATION_NAME)
         .send()
         .await?
@@ -42,7 +42,7 @@ async fn bing() -> Result<()> {
 async fn google() -> Result<()> {
     let cli = reqwest::Client::new();
     cli.get("https://www.google.com/ping")
-        .query(&[("sitemap", "https://christine.website/sitemap.xml")])
+        .query(&[("sitemap", "https://fetsorn.website/sitemap.xml")])
         .header("User-Agent", crate::APPLICATION_NAME)
         .send()
         .await?
@@ -56,17 +56,17 @@ async fn cloudflare() -> Result<()> {
     let cli = cfcache::Client::new(env::var("CF_TOKEN")?, env::var("CF_ZONE_ID")?)?;
     cli.purge(
         vec![
-            "https://christine.website/sitemap.xml",
-            "https://christine.website",
-            "https://christine.website/blog",
-            "https://christine.website/blog.atom",
-            "https://christine.website/blog.json",
-            "https://christine.website/blog.rss",
-            "https://christine.website/gallery",
-            "https://christine.website/talks",
-            "https://christine.website/resume",
-            "https://christine.website/signalboost",
-            "https://christine.website/feeds",
+            "https://fetsorn.website/sitemap.xml",
+            "https://fetsorn.website",
+            "https://fetsorn.website/blog",
+            "https://fetsorn.website/blog.atom",
+            "https://fetsorn.website/blog.json",
+            "https://fetsorn.website/blog.rss",
+            "https://fetsorn.website/gallery",
+            "https://fetsorn.website/talks",
+            "https://fetsorn.website/resume",
+            "https://fetsorn.website/signalboost",
+            "https://fetsorn.website/feeds",
         ]
         .into_iter()
         .map(|i| i.to_string())

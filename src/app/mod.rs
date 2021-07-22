@@ -48,7 +48,7 @@ async fn patrons() -> Result<Option<patreon::Users>> {
     }
 }
 
-pub const ICON: &'static str = "https://christine.website/static/img/avatar.png";
+pub const ICON: &'static str = "https://fetsorn.website/static/img/avatar.png";
 
 pub struct State {
     pub cfg: Config,
@@ -90,17 +90,17 @@ pub async fn init(cfg: PathBuf) -> Result<State> {
     let everything: Vec<Post> = everything.into_iter().take(20).collect();
 
     let mut jfb = jsonfeed::Feed::builder()
-        .title("Christine Dodrill's Blog")
+        .title("Anton Davydov's Blog")
         .description("My blog posts and rants about various technology things.")
         .author(
             jsonfeed::Author::new()
-                .name("Christine Dodrill")
-                .url("https://christine.website")
+                .name("Anton Davydov")
+                .url("https://fetsorn.website")
                 .avatar(ICON),
         )
-        .feed_url("https://christine.website/blog.json")
+        .feed_url("https://fetsorn.website/blog.json")
         .user_comment("This is a JSON feed of my blogposts. For more information read: https://jsonfeed.org/version/1")
-        .home_page_url("https://christine.website")
+        .home_page_url("https://fetsorn.website")
         .icon(ICON)
         .favicon(ICON);
 
@@ -113,17 +113,17 @@ pub async fn init(cfg: PathBuf) -> Result<State> {
     let smw = sitemap::writer::SiteMapWriter::new(&mut sm);
     let mut urlwriter = smw.start_urlset()?;
     for url in &[
-        "https://christine.website/resume",
-        "https://christine.website/contact",
-        "https://christine.website/",
-        "https://christine.website/blog",
-        "https://christine.website/signalboost",
+        "https://fetsorn.website/resume",
+        "https://fetsorn.website/contact",
+        "https://fetsorn.website/",
+        "https://fetsorn.website/blog",
+        "https://fetsorn.website/signalboost",
     ] {
         urlwriter.url(*url)?;
     }
 
     for post in &everything {
-        urlwriter.url(format!("https://christine.website/{}", post.link))?;
+        urlwriter.url(format!("https://fetsorn.website/{}", post.link))?;
     }
 
     urlwriter.end()?;

@@ -62,7 +62,7 @@
     "xepkgs": {
         "branch": "master",
         "ref": "master",
-        "repo": "https://tulpa.dev/Xe/nixpkgs",
+        "repo": "https://gitea.fetsorn.website/fetsorn/nixpkgs",
         "rev": "5621d41482bca79d05c97758bb86eeb9099e26c9",
         "type": "git"
     }

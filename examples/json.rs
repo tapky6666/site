@@ -20,7 +20,7 @@ fn main() {
     "id": 31337,
     "author": {
       "id": 420,
-      "name": "Cadey"
+      "name": "fetsorn"
     },
     "body": "hahaha its is an laughter image",
     "in_reply_to": 31335

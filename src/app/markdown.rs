@@ -24,7 +24,7 @@ pub fn render(inp: &str) -> Result<String> {
         let mut data = node.data.borrow_mut();
         match &mut data.value {
             &mut NodeValue::Link(ref mut link) => {
-                let base = Url::parse("https://christine.website/")?;
+                let base = Url::parse("https://fetsorn.website/")?;
                 let u = base.join(std::str::from_utf8(&link.url.clone())?)?;
                 if u.scheme() != "conversation" {
                     return Ok(());

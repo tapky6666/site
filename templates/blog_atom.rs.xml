@@ -5,22 +5,22 @@
 
 <?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <id>https://christine.website/blog.atom</id>
-  <title>Christine Dodrill's Blog</title>
+  <id>https://fetsorn.website/blog.atom</id>
+  <title>Anton Davydov's Blog</title>
   <updated>@Utc::now().to_rfc3339()</updated>
   <author>
-    <name>Christine Dodrill</name>
-    <email>me@@christine.website</email>
+    <name>Anton Davydov</name>
+    <email>fetsorn@@gmail.com</email>
   </author>
-  <link href="https://christine.website/blog.atom" rel="self"/>
-  <link href="https://christine.website/blog" rel="alternate"/>
+  <link href="https://fetsorn.website/blog.atom" rel="self"/>
+  <link href="https://fetsorn.website/blog" rel="alternate"/>
   <generator uri="@env!("CARGO_PKG_REPOSITORY")" version="@env!("CARGO_PKG_VERSION")">@env!("CARGO_PKG_NAME")</generator>
   @for post in posts {
     <entry>
-      <id>https://christine.website/@post.link</id>
+      <id>https://fetsorn.website/@post.link</id>
       <title>@post.front_matter.title</title>
       <published>@post.date.to_rfc3339()</published>
-      <link href="https://christine.website/@post.link" rel="alternate"/>
+      <link href="https://fetsorn.website/@post.link" rel="alternate"/>
     </entry>
   }
 </feed>

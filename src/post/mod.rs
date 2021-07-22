@@ -31,14 +31,14 @@ impl Into<jsonfeed::Item> for Post {
         let mut result = jsonfeed::Item::builder()
             .title(self.front_matter.title)
             .content_html(self.body_html)
-            .id(format!("https://christine.website/{}", self.link))
-            .url(format!("https://christine.website/{}", self.link))
+            .id(format!("https://fetsorn.website/{}", self.link))
+            .url(format!("https://fetsorn.website/{}", self.link))
             .date_published(self.date.to_rfc3339())
             .author(
                 jsonfeed::Author::new()
-                    .name("Christine Dodrill")
-                    .url("https://christine.website")
-                    .avatar("https://christine.website/static/img/avatar.png"),
+                    .name("Anton Davydov")
+                    .url("https://fetsorn.website")
+                    .avatar("https://fetsorn.website/static/img/avatar.png"),
             );
 
         let mut tags: Vec<String> = vec![];
@@ -100,7 +100,7 @@ async fn read_post(dir: &str, fname: PathBuf) -> Result<Post> {
 
     let mentions: Vec<mi::WebMention> = match std::env::var("MI_TOKEN") {
         Ok(token) => mi::Client::new(token.to_string(), crate::APPLICATION_NAME.to_string())?
-            .mentioners(format!("https://christine.website/{}", link))
+            .mentioners(format!("https://fetsorn.website/{}", link))
             .await
             .map_err(|why| tracing::error!("error: can't load mentions for {}: {}", link, why))
             .unwrap_or(vec![])
@@ -125,7 +125,7 @@ async fn read_post(dir: &str, fname: PathBuf) -> Result<Post> {
     let new_post = NewPost {
         title: front_matter.title.clone(),
         summary: format!("{} minute read", read_time_estimate_minutes),
-        link: format!("https://christine.website/{}", link),
+        link: format!("https://fetsorn.website/{}", link),
     };
 
     Ok(Post {

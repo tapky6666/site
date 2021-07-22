@@ -21,7 +21,7 @@ pub struct Client {
 }
 
 static USER_AGENT: &str = concat!(
-    "xesite ",
+    "fesite ",
     env!("CARGO_PKG_NAME"),
     "/",
     env!("CARGO_PKG_VERSION")

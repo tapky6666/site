@@ -14,5 +14,5 @@ jobs:
       - uses: cachix/install-nix-action@v12
       - uses: cachix/cachix-action@v7
         with:
-          name: xe
+          name: tapky6666
       - run: nix-build --no-out-link

@@ -14,33 +14,33 @@
 <!-- Facebook -->
 <meta property="og:type" content="website" />
 <meta property="og:title" content="@post.front_matter.title" />
-<meta property="og:site_name" content="Christine Dodrill's Blog" />
+<meta property="og:site_name" content="Anton Davydov's Blog" />
 
 <!-- Description -->
-<meta name="description" content="@post.front_matter.title - Christine Dodrill's Blog" />
-<meta name="author" content="Christine Dodrill">
+<meta name="description" content="@post.front_matter.title - Anton Davydov's Blog" />
+<meta name="author" content="Anton Davydov">
 
-<link rel="canonical" href="https://christine.website/@post.link">
+<link rel="canonical" href="https://fetsorn.website/@post.link">
 
 <script type="application/ld+json">
  @{
    "@@context": "http://schema.org",
    "@@type": "Article",
    "headline": "@post.front_matter.title",
-   "image": "https://christine.website/static/img/avatar.png",
-   "url": "https://christine.website/@post.link",
+   "image": "https://fetsorn.website/static/img/avatar.png",
+   "url": "https://fetsorn.website/@post.link",
    "datePublished": "@post.date.format("%Y-%m-%d")",
    "mainEntityOfPage": @{
        "@@type": "WebPage",
-       "@@id": "https://christine.website/@post.link"
+       "@@id": "https://fetsorn.website/@post.link"
    @},
    "author": @{
        "@@type": "Person",
-       "name": "Christine Dodrill"
+       "name": "Anton Davydov"
    @},
    "publisher": @{
        "@@type": "Person",
-       "name": "Christine Dodrill"
+       "name": "Anton Davydov"
    @}
  @}
 </script>
@@ -108,8 +108,8 @@ function share_on_mastodon() @{
                     hashtags += "@for tag in post.front_matter.tags.as_ref().unwrap() { #@tag}";
                 }
 
-                // Tagging users, such as offical accounts or the author of the post 
-                var author   = "@@cadey@@pony.social"; 
+                // Tagging users, such as offical accounts or the author of the post
+                var author   = "@@fetsorn@@mastodon.public";
 
                 // Create the Share URL
                 // https://someinstance.tld/share?text=URL%20encoded%20text

@@ -44,7 +44,7 @@ async fn main() -> Result<()> {
     );
 
     let healthcheck = warp::get().and(warp::path(".within").and(warp::path("health")).map(|| "OK"));
-    let new_post = warp::path!(".within" / "website.within.xesite" / "new_post")
+    let new_post = warp::path!(".within" / "website.within.fesite" / "new_post")
         .and(with_state(state.clone()))
         .and_then(handlers::feeds::new_post);
 
@@ -146,8 +146,8 @@ async fn main() -> Result<()> {
         .and(warp::fs::file("./static/assetlinks.json"));
 
     let go_vanity_jsonfeed = warp::path("jsonfeed")
-        .and(warp::any().map(move || "christine.website/jsonfeed"))
-        .and(warp::any().map(move || "https://tulpa.dev/Xe/jsonfeed"))
+        .and(warp::any().map(move || "fetsorn.website/jsonfeed"))
+        .and(warp::any().map(move || "https://gitea.fetsorn.website/fetsorn/jsonfeed"))
         .and(warp::any().map(move || "master"))
         .and_then(go_vanity::gitea);
 

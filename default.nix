@@ -16,7 +16,7 @@ let
   dhallpkgs = import sources.easy-dhall-nix { inherit pkgs; };
   src = srcNoTarget ./.;
 
-  xesite = naersk.buildPackage {
+  fesite = naersk.buildPackage {
     inherit src;
     doCheck = true;
     buildInputs = [ pkg-config openssl git ];
@@ -24,7 +24,7 @@ let
   };
 
   config = stdenv.mkDerivation {
-    pname = "xesite-config";
+    pname = "fesite-config";
     version = "HEAD";
     buildInputs = [ dhallpkgs.dhall-simple ];
 
@@ -37,7 +37,7 @@ let
   };
 
 in pkgs.stdenv.mkDerivation {
-  inherit (xesite) name;
+  inherit (fesite) name;
   inherit src;
   phases = "installPhase";
 
@@ -52,6 +52,6 @@ in pkgs.stdenv.mkDerivation {
     cp -rf $src/static $out/static
     cp -rf $src/talks $out/talks
 
-    cp -rf ${xesite}/bin/xesite $out/bin/xesite
+    cp -rf ${fesite}/bin/fesite $out/bin/fesite
   '';
 }

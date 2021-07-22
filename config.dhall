@@ -45,29 +45,12 @@ let Config =
         { signalboost = [] : List Person.Type
         , authors =
           [ Author::{
-            , name = "Xe"
-            , handle = "xe"
+            , name = "fetsorn"
+            , handle = "fetsorn"
             , picUrl = Some "/static/img/avatar.png"
-            , link = Some "https://christine.website"
-            , twitter = Some "theprincessxena"
+            , link = Some "https://fetsorn.website"
+            , twitter = Some "fetsorn"
             , default = True
-            , inSystem = True
-            }
-          , Author::{
-            , name = "Ashe"
-            , handle = "ectamorphic"
-            , picUrl = None Text
-            , link = None Text
-            , twitter = None Text
-            , inSystem = True
-            }
-          , Author::{
-            , name = "Jessie"
-            , handle = "Heartmender"
-            , picUrl = Some
-                "https://cdn.christine.website/file/christine-static/img/UPRcp1pO_400x400.jpg"
-            , link = Some "https://heartmender.writeas.com"
-            , twitter = Some "BeJustFine"
             , inSystem = True
             }
           ]
