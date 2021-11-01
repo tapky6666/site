@@ -498,6 +498,52 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e88a8acf291dafb59c2d96e8f59828f3838bb1a70398823ade51a84de6a6deed"
 
 [[package]]
+name = "fesite"
+version = "2.3.0"
+dependencies = [
+ "cfcache",
+ "chrono",
+ "color-eyre",
+ "comrak",
+ "envy",
+ "estimated_read_time",
+ "eyre",
+ "futures",
+ "glob",
+ "go_vanity",
+ "hyper",
+ "jsonfeed",
+ "kankyo",
+ "lazy_static",
+ "log",
+ "mi",
+ "mime",
+ "patreon",
+ "pfacts",
+ "pretty_env_logger",
+ "prometheus",
+ "rand 0.8.3",
+ "reqwest",
+ "ructe",
+ "sdnotify",
+ "serde",
+ "serde_dhall",
+ "serde_json",
+ "serde_yaml",
+ "sitemap",
+ "thiserror",
+ "tokio",
+ "tokio-stream",
+ "tracing",
+ "tracing-futures",
+ "tracing-subscriber",
+ "url",
+ "uuid",
+ "warp",
+ "xml-rs",
+]
+
+[[package]]
 name = "flate2"
 version = "1.0.20"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2073,9 +2119,9 @@ checksum = "cda74da7e1a664f795bb1f8a87ec406fb89a02522cf6e50620d016add6dbbf5c"
 
 [[package]]
 name = "tokio"
-version = "1.5.0"
+version = "1.13.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "83f0c8e7c0addab50b663055baf787d0af7f413a46e6e7fb9559a4e4db7137a5"
+checksum = "588b2d10a336da58d877567cd8fb8a14b463e2104910f8132cd054b4b96e29ee"
 dependencies = [
  "autocfg",
  "bytes",
@@ -2114,9 +2160,9 @@ dependencies = [
 
 [[package]]
 name = "tokio-stream"
-version = "0.1.6"
+version = "0.1.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f8864d706fdb3cc0843a49647ac892720dac98a6eeb818b77190592cf4994066"
+checksum = "50145484efff8818b5ccd256697f36863f587da82cf8b409c53adf1e840798e3"
 dependencies = [
  "futures-core",
  "pin-project-lite",
@@ -2591,52 +2637,6 @@ name = "xdg"
 version = "2.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d089681aa106a86fade1b0128fb5daf07d5867a509ab036d99988dec80429a57"
-
-[[package]]
-name = "fesite"
-version = "2.3.0"
-dependencies = [
- "cfcache",
- "chrono",
- "color-eyre",
- "comrak",
- "envy",
- "estimated_read_time",
- "eyre",
- "futures",
- "glob",
- "go_vanity",
- "hyper",
- "jsonfeed",
- "kankyo",
- "lazy_static",
- "log",
- "mi",
- "mime",
- "patreon",
- "pfacts",
- "pretty_env_logger",
- "prometheus",
- "rand 0.8.3",
- "reqwest",
- "ructe",
- "sdnotify",
- "serde",
- "serde_dhall",
- "serde_json",
- "serde_yaml",
- "sitemap",
- "thiserror",
- "tokio",
- "tokio-stream",
- "tracing",
- "tracing-futures",
- "tracing-subscriber",
- "url",
- "uuid",
- "warp",
- "xml-rs",
-]
 
 [[package]]
 name = "xml-rs"
