@@ -483,9 +483,9 @@ checksum = "649cfd341410b1f8906e8ca1b39e5534be9312fda9182edd770cec34dfbce8d7"
 
 [[package]]
 name = "eyre"
-version = "0.6.5"
+version = "0.6.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "221239d1d5ea86bf5d6f91c9d6bc3646ffe471b08ff9b0f91c44f115ac969d2b"
+checksum = "bc225d8f637923fe585089fcf03e705c222131232d2c1fb622e84ecf725d0eb8"
 dependencies = [
  "indenter",
  "once_cell",
@@ -496,6 +496,52 @@ name = "fake-simd"
 version = "0.1.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e88a8acf291dafb59c2d96e8f59828f3838bb1a70398823ade51a84de6a6deed"
+
+[[package]]
+name = "fesite"
+version = "2.3.0"
+dependencies = [
+ "cfcache",
+ "chrono",
+ "color-eyre",
+ "comrak",
+ "envy",
+ "estimated_read_time",
+ "eyre",
+ "futures",
+ "glob",
+ "go_vanity",
+ "hyper",
+ "jsonfeed",
+ "kankyo",
+ "lazy_static",
+ "log",
+ "mi",
+ "mime",
+ "patreon",
+ "pfacts",
+ "pretty_env_logger",
+ "prometheus",
+ "rand 0.8.3",
+ "reqwest",
+ "ructe",
+ "sdnotify",
+ "serde",
+ "serde_dhall",
+ "serde_json",
+ "serde_yaml",
+ "sitemap",
+ "thiserror",
+ "tokio",
+ "tokio-stream",
+ "tracing",
+ "tracing-futures",
+ "tracing-subscriber",
+ "url",
+ "uuid",
+ "warp",
+ "xml-rs",
+]
 
 [[package]]
 name = "flate2"
@@ -2591,52 +2637,6 @@ name = "xdg"
 version = "2.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d089681aa106a86fade1b0128fb5daf07d5867a509ab036d99988dec80429a57"
-
-[[package]]
-name = "fesite"
-version = "2.3.0"
-dependencies = [
- "cfcache",
- "chrono",
- "color-eyre",
- "comrak",
- "envy",
- "estimated_read_time",
- "eyre",
- "futures",
- "glob",
- "go_vanity",
- "hyper",
- "jsonfeed",
- "kankyo",
- "lazy_static",
- "log",
- "mi",
- "mime",
- "patreon",
- "pfacts",
- "pretty_env_logger",
- "prometheus",
- "rand 0.8.3",
- "reqwest",
- "ructe",
- "sdnotify",
- "serde",
- "serde_dhall",
- "serde_json",
- "serde_yaml",
- "sitemap",
- "thiserror",
- "tokio",
- "tokio-stream",
- "tracing",
- "tracing-futures",
- "tracing-subscriber",
- "url",
- "uuid",
- "warp",
- "xml-rs",
-]
 
 [[package]]
 name = "xml-rs"
